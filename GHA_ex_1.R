@@ -1,5 +1,5 @@
-Rscript -e "install.packages('dplyr', repos = 'https://packagemanager.rstudio.com/cran/__linux__/focal/latest')"
-Rscript -e "install.packages('readr', repos = 'https://packagemanager.rstudio.com/cran/__linux__/focal/latest')"
+install.packages('dplyr', repos = 'https://packagemanager.rstudio.com/cran/__linux__/focal/latest')
+install.packages('readr', repos = 'https://packagemanager.rstudio.com/cran/__linux__/focal/latest')
 
 library(readr) # to load the data and write the data
 library(dplyr) # to transfrom the data

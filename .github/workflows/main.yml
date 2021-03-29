@@ -27,7 +27,7 @@ jobs:
           r-version: '4.0.4' # The R version to load (if necessary) and use.
 
       # Run Script
-     # - run: Rscript -e 'print("Hello World")'
+      - run: Rscript -e 'print("Hello World")'
       
       - name: Installing packages
         run: 

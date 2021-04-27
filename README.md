@@ -1,4 +1,3 @@
 # train-git
-training
-tests
-test bis
+
+Branch with changes in R script, and updated README.

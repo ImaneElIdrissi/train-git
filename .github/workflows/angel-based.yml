@@ -42,14 +42,14 @@ jobs:
 
       - name: Rendering dashboard
         run: |
-          Rscript -e 'rmarkdown::render("docs/index.Rmd")'
+          Rscript -e 'rmarkdown::render("index.Rmd")'
 
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git pull origin main
-          git add docs/index.html
+          git add index.html
           git commit -m "update tests_today.csv" || echo "Nothing to update"
 
       - name: Push changes

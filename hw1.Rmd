@@ -1,0 +1,37 @@
+---
+title: "What is happening with COVID-19?"
+output: 
+  flexdashboard::flex_dashboard:
+    vertical_layout: fill
+---
+
+```{r setup , include=FALSE}
+data = read.csv("C:/Users/imane/Documents/GitHub_Training/hw1.csv")
+sel_rows = !is.na(data[, 9])
+x = data[sel_rows,9]
+yCFR = data[sel_rows, 10]
+yPR = data[sel_rows, 8]
+
+```
+
+### Case fatality rate and percent of rapid tests among all tests performed
+    
+```{r, fig.width=10, fig.height=7}
+plot(x, yCFR, main="case fatality rate versus percent of RDTs", xlab="Percent of RDTs among all tests performed", ylab="Case fatality rate", type="p", col="blue")
+
+```
+    
+### Positivity rate and percent of rapid tests among all tests performed
+
+```{r, fig.width=10, fig.height=7}
+plot(x, yPR, main="positivity rate versus percent of RDTs", xlab="Percent of RDTs among all tests performed", ylab="positivity rate", type="p", col="red")
+
+```
+
+### Positivity rate and percent of rapid tests among all tests performed
+
+```{r, fig.width=10, fig.height=7}
+plot(x, yPR, col="blue")
+lines(x, yCFR, type="p", col="red")
+
+```
